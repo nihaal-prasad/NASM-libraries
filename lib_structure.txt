@@ -1,0 +1,96 @@
+=================
+= Lib Structure =
+=================
+
+assemble.py:
+    - Assembles NASM code
+
+convert.asm:
+    - str2int(string s):
+        - Usage: To convert a string into an integer
+        - Input: String in eax
+        - Registers: eax, ebx, ecx, edx, edi
+        - Output: Int in eax
+    - int2str(int i, buffer b):
+        - Usage: To convert an integer into a string
+        - Input: Int in eax, buffer in ebx
+        - Registers: eax, ebx, ecx, edx, esp
+        - Output: String inside the buffer that was inputted
+
+math.asm
+    - power(int a, int b):
+        - Usage: To raise int a to the power of int b
+        - Input: Base integer in eax, exponent int in ebx
+        - Registers: eax, ebx, ecx
+        - Output: Int a^b in eax
+    - rand(int a):
+        - Usage: To create a random integer between 0 and a
+        - Input: Maximum integer in eax
+        - Registers: eax, ebx, edx
+        - Output: Random number between 0 and a in eax
+
+print.asm:
+    - len(string s):
+        - Usage: To find the length of a string
+        - Input: String in eax
+        - Registers: eax, ebx
+        - Output: String in eax, length in ebx
+    - print(string s):
+        - Usage: To print out a string
+        - Input: String in eax
+        - Registers: eax, ebx, ecx, edx
+        - Output: Void
+    - printF(string s, file f):
+        - Usage: To print out a string in a file
+        - Input: String in eax, file in ebx
+        - Registers: eax, ebx, ecx, edx
+        - Output: Void
+    - printCF(string s, file f):
+        - Usage: To create a file and then print a string to it
+        - Input: String in eax, file in ebx
+        - Registers: eax, ebx, ecx, edx
+        - Output: File descriptor in eax
+    - printLF(string s): Will print out a string and a LF character
+        - Usage: To print out a string and a LF character
+        - Input: String in eax
+        - Registers: eax, ebx, ecx, edx, esp
+        - Output: Void
+
+read.asm:
+    - read(variable a, length l):
+        - Usage: To read from STDIN
+        - Input: Variable to send output to in eax, length in ebx
+        - Registers: eax, ebx, ecx, edx
+        - Output: Value read from STDIN is outputted into variable that was in eax
+    - readF(buffer b, file f, length l):
+        - Usage: To read from file a and store the output in buffer b
+        - Input: Buffer in eax, file name in ebx, and length in ecx
+        - Registers: eax, ebx, ecx, edx
+        - Output: Value read from file is outputted into buffer that was in eax
+
+str.asm:
+    - isEqual(string a, string b):
+        - Usage: To check if a and b are equal to each other
+        - Input: String in eax, string in ebx
+        - Registers: eax, ebx, ecx, edx
+        - Output: Sets ZF to 1 if they are equal or sets ZF to 0 if they are not
+    - isEqualIgnoreCase(string a, string b, buffer c, buffer d):
+        - Usage: To check if a and b are equal to each other and ignore whether they are capitalized or not
+        - Input: String in eax, string in ebx, buffer in ecx, buffer in edx
+        - Registers: eax, ebx, ecx, edx
+        - Output: Sets ZF to 1 if they are equal or sets ZF to 0 if they are not, capitalized forms of a and b are in buffer c and d respectively
+    - strCopy(string a, buffer b):
+        - Usage: Copies string a into buffer b
+        - Input: String in eax, buffer in ebx
+        - Registers: eax, ebx, ecx
+        - Output: String in eax and string in buffer in ebx
+    - upperCase(string s):
+        - Usage: To convert all strings into upper case characters
+        - Input: String in eax
+        - Registers: eax
+        - Output: String in eax
+    - lowerCase(string s):
+        - Usage: To convert all strings into lower case characters
+        - Input: String in eax
+        - Registers: eax
+        - Output: String in eax
