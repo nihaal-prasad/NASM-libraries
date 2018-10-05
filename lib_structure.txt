@@ -4,6 +4,8 @@
 
 assemble.py:
     - Assembles NASM code
+    - The only reason I made this in python is because I got tired of writing weird assembly code.
+    - I promise that the rest of this project is written in assembly
 
 convert.asm:
     - str2int(string s):
