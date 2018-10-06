@@ -7,10 +7,13 @@ Using the library is quite simple. I have tried to document as much as possible 
 I also realize that there is one random bash script in this project. That file is only used for assembling your code, and nothing more than that. You can easily run that script using "./assemble.sh [enter_your_asm_file_here]" and it will automatically run the commands necessary to assemble your code on a i_386 machine.
 
 ## Library structure
+
+Here I will paste the entire library structure of all of my assembly code. This will contain the name of each function, how the function is supposed to be used, how the function takes in input parameters (and in what form), what registers the function will use (and therefore probably erase data from), and how the function will output its values.
+
 assemble.sh:
 
     - assemble(string file_name)
-        - Usage: Assembles NASM code
+        - Usage: Assembles and links NASM code
         - Input: Command line arguments (ex. "./assemble.sh [file_name]")
         - Registers: idk
         - Output: An object file and an executable file.
