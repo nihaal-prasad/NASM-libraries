@@ -4,14 +4,16 @@ Hello everyone. These are libraries that I have made while I was learning NASM a
 ## Usage
 Using the library is quite simple. I have tried to document as much as possible about this library, so I have the whole library structure printed below. In order to use this library, all you have to do is type "%include 'filename'" at the top of your .asm file, and then type "call [function name]" in your .txt section whenever you want to call a function in your code :)
 
-I also realize that there is one random python file in this project. That file is only used for assembling your code, and nothing more than that. You can easily run that script using "python assemble.py [enter_your_asm_file_here]".
+I also realize that there is one random bash script in this project. That file is only used for assembling your code, and nothing more than that. You can easily run that script using "./assemble.sh [enter_your_asm_file_here]" and it will automatically run the commands necessary to assemble your code on a i_386 machine.
 
 ## Library structure
-assemble.py:
+assemble.sh:
 
-    - Assembles NASM code
-    - The only reason I made this in python is because I got tired of writing weird assembly code.
-    - I promise that the rest of this project is written in assembly
+    - assemble(string file_name)
+        - Usage: Assembles NASM code
+        - Input: Command line arguments (ex. "./assemble.sh [file_name]")
+        - Registers: idk
+        - Output: An object file and an executable file.
 
 convert.asm:
 
