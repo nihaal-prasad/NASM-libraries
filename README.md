@@ -1,5 +1,5 @@
 # NASM-libraries
-Hello everyone. These are libraries that I have made while I was learning NASM assembly so that I could get some work done quicker. Using this library makes it easier to code in assembly, and I plan to continue updating it as I learn more and more about NASM assembly.
+Hello everyone. These are libraries that I have made while I was learning NASM assembly so that I could get some work done quicker.
 
 ## Usage
 Using the library is quite simple. I have tried to document as much as possible about this library, so I have the whole library structure printed below. In order to use this library, all you have to do is type "%include 'filename'" at the top of your .asm file, and then type "call [function name]" in your .txt section whenever you want to call a function in your code :)
